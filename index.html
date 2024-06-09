@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <h1>Форма</h1>
+    <div class="form">
+        <h1>Форма</h1>
         <form action="">
             <datalist id="names">
                 <option value="Влад Суворкін">Влад Суворкін</option>
@@ -21,8 +21,10 @@
                 id="name"
                 placeholder="Введіть своє і'мя"
                 list="names"
+                required
             />
             </p>
+
             <p>
                 <label for="email">Email</label>
                 <input
@@ -34,7 +36,90 @@
                   required
                 />
             </p>
-        </form>
 
+            <p>
+                <label for="password">Пароль</label>
+                <input
+                  id="password"
+                  placeholder="Введіть пароль"
+                  name="password"
+                  type="password"
+                  required
+                />
+            </p>
+
+            <p>
+                <label for="password">Підтвердіть Пароль</label>
+                <input
+                  id="password"
+                  placeholder="Введіть пароль ще раз"
+                  name="password"
+                  type="password"
+                  required
+                />
+            </p>
+            
+            <div class="radio-block">
+            <p class="radio-p">Стать</p>
+                <ul>
+                    <li>
+                    <label class="standard">
+                        Чоловіча
+                        <input checked name="phoneType" value="iphone" type="radio" />
+                    </label>
+                    </li>
+                    <li>
+                    <label class="standard">
+                        Жіноча
+                        <input name="phoneType" value="android" type="radio" />
+                    </label>
+                    </li>
+                </ul>
+            </div>
+
+            <p>
+                <label class="age" for="age">Вік</label>
+                <input
+                  id="age"
+                  placeholder="Скільки вам років?"
+                  name="age"
+                  type="number"
+                />
+            </p>
+
+            <div class="radio-block">
+                <p class="radio-p">Курс</p>
+                <select name="select">
+                    <option value="value1">Front-End</option>
+                    <option value="value2">Back-End</option>
+                    <option value="value3">Project Management</option>
+                    <option value="value3">QA Manual</option>
+                  </select>       
+            </div>
+
+            <p>
+                <label for="text">Повна адреса</label>
+                <textarea
+                  id="text"
+                  name="text"
+                  rows="5"
+                  maxlength="100"
+                  minlength="10"
+                ></textarea>
+            </p>
+
+            <label>
+                <input name="agree" type="checkbox" />
+                Я погоджуюсь з обробкою персональних даних
+            </label>
+
+            <div class="buttons">
+                <button><a href="">Очистити форму</a></button>
+                <button><a href="">Зареєструватися</a></button>
+            </div>
+
+            
+        </form>
+    </div>
 </body>
 </html>
