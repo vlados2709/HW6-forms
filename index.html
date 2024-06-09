@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Форма</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+    <h1>Форма</h1>
+        <form action="">
+            <datalist id="names">
+                <option value="Влад Суворкін">Влад Суворкін</option>
+              </datalist>
+
+            <p>
+                <label for="name">Повне Ім'я</label>
+                <input
+                type="text"
+                id="name"
+                placeholder="Введіть своє і'мя"
+                list="names"
+            />
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input
+                  tabindex="1"
+                  id="email"
+                  placeholder="Введіть ел. адресу"
+                  name="email"
+                  type="email"
+                  required
+                />
+            </p>
+        </form>
+
 </body>
 </html>
