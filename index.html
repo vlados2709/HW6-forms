@@ -3,9 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Форма</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="form">
+        <h1>Форма</h1>
+        <form action="">
+            <datalist id="names">
+                <option value="Влад Суворкін">Влад Суворкін</option>
+              </datalist>
+
+            <p>
+                <label for="name">Повне Ім'я</label>
+                <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Введіть своє і'мя"
+                list="names"
+                required
+            />
+            </p>
+
+            <p>
+                <label for="email">Email</label>
+                <input
+                  tabindex="1"
+                  id="email"
+                  placeholder="Введіть ел. адресу"
+                  name="email"
+                  type="email"
+                  required
+                />
+            </p>
+
+            <p>
+                <label for="password">Пароль</label>
+                <input
+                  id="password"
+                  placeholder="Введіть пароль"
+                  name="password"
+                  type="password"
+                  required
+                />
+            </p>
+
+            <p>
+                <label for="password">Підтвердіть Пароль</label>
+                <input
+                  id="password"
+                  placeholder="Введіть пароль ще раз"
+                  name="confirm password"
+                  type="password"
+                  required
+                />
+            </p>
+            
+            <div class="radio-block">
+            <p class="radio-p">Стать</p>
+                <ul>
+                    <li>
+                    <label class="standard">
+                        Чоловіча
+                        <input checked name="phoneType" value="iphone" type="radio" />
+                    </label>
+                    </li>
+                    <li>
+                    <label class="standard">
+                        Жіноча
+                        <input name="phoneType" value="android" type="radio" />
+                    </label>
+                    </li>
+                </ul>
+            </div>
+
+            <p>
+                <label class="age" for="age">Вік</label>
+                <input
+                  id="age"
+                  placeholder="Скільки вам років?"
+                  name="age"
+                  type="number"
+                />
+            </p>
+
+            <div class="radio-block">
+                <p class="radio-p">Курс</p>
+                <select name="select">
+                    <option value="value1">Front-End</option>
+                    <option value="value2">Back-End</option>
+                    <option value="value3">Project Management</option>
+                    <option value="value3">QA Manual</option>
+                  </select>       
+            </div>
+
+            <p>
+                <label for="text">Повна адреса</label>
+                <textarea
+                  id="text"
+                  name="text"
+                  rows="5"
+                  maxlength="100"
+                  minlength="10"
+                ></textarea>
+            </p>
+
+            <label>
+                <input name="agree" type="checkbox" />
+                Я погоджуюсь з обробкою персональних даних
+            </label>
+
+            <div class="buttons">
+                <button type="reset"></button>
+                <button type="submit"></button>
+            </div>
+
+            
+        </form>
+    </div>
 </body>
 </html>
